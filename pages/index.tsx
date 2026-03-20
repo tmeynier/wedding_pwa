@@ -7,8 +7,7 @@ const Index = () => {
 
   useEffect(() => {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://3.75.86.179';
-  
-    fetch(`http://3.75.86.179/api/items/`)
+    fetch(`https://dasha-tristan-wedding.com/api/items/`)
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.error("Error fetching items:", err))

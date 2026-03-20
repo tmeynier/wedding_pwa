@@ -6,8 +6,9 @@ const Index = () => {
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    // Replace with your actual backend URL
-    fetch('http://localhost:8000/api/items/')
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://3.75.86.179';
+  
+    fetch(`http://3.75.86.179/api/items/`)
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.error("Error fetching items:", err))

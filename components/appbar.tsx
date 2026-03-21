@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const links = [
-	{ label: 'Story', href: '/story' },
-	{ label: 'Recipes', href: '/recipes' },
+	{ label: 'Honey Moon', href: '/honey_moon' },
+	{ label: 'Info', href: '/info' },
 ]
 
 const Appbar = () => {
@@ -14,7 +14,7 @@ const Appbar = () => {
 			<header className='border-b bg-zinc-100 px-safe dark:border-zinc-800 dark:bg-zinc-900'>
 				<div className='mx-auto flex h-20 max-w-screen-md items-center justify-between px-6'>
 					<Link href='/'>
-						<h1 className='font-medium'>Rice Bowl</h1>
+						<h1 className='font-medium'>Home</h1>
 					</Link>
 
 					<nav className='flex items-center space-x-6'>
@@ -37,11 +37,11 @@ const Appbar = () => {
 						</div>
 
 						<div
-							title='Gluten Free'
+							title='Dasha & Tristan'
 							className='h-10 w-10 rounded-full bg-zinc-200 bg-cover bg-center shadow-inner dark:bg-zinc-800'
 							style={{
-								backgroundImage:
-									'url(https://images.unsplash.com/photo-1612480797665-c96d261eae09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80)',
+								// No import needed, just point to the root path
+								backgroundImage: 'url(images/profile.jpg)',
 							}}
 						/>
 					</nav>

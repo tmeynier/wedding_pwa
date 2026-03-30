@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Page from '@/components/page'
-import Section from '@/components/section'
 
 // Composants décoratifs réutilisables
 const FlowerIcon = ({ className = 'w-6 h-6' }) => (
@@ -56,7 +55,7 @@ const Index = () => {
                 setTimeout(() => {
                     setIsModalOpen(false)
                     setStatus('idle')
-                    setFormData({ firstName: '', lastName: '' })
+                    setFormData({ firstName: '', lastName: '' , transport: '' })
                 }, 2000)
             } else { setStatus('error') }
         } catch (err) { setStatus('error') }
@@ -65,7 +64,7 @@ const Index = () => {
     return (
         <Page>
             {/* --- Hero Section --- */}
-            <Section className="text-center">
+            <div className="text-center">
             <h1 className='text-3xl md:text-4xl font-serif text-zinc-900 dark:text-zinc-50 text-center'>
                 Le jour J arrive à grands pas !
             </h1>
@@ -84,10 +83,10 @@ const Index = () => {
                     priority
                 />
             </div>
-            </Section>
+            </div>
 
             {/* --- Notre Histoire --- */}
-            <Section>
+            <div>
                 <div className='flex items-center gap-3 mb-4'>
                     <FlowerIcon className='w-6 h-6 text-zinc-300 dark:text-zinc-700' />
                     <h2 className='text-2xl font-serif text-zinc-800 dark:text-zinc-200'>
@@ -108,10 +107,10 @@ const Index = () => {
                         Nous avons hâte de célébrer notre union entourés des personnes qui nous sont chères. 
                     </p>
                 </div>
-            </Section>
+            </div>
 
             {/* --- RSVP Button --- */}
-            <Section>
+            <div>
                 <div className='flex justify-center py-4'>
                     <button
                         onClick={() => setIsModalOpen(true)}
@@ -120,10 +119,10 @@ const Index = () => {
                         M'ajouter à la liste de mariage
                     </button>
                 </div>
-            </Section>
+            </div>
 
             {/* --- Infos Pratiques & Programme --- */}
-            <Section className='relative'>
+            <div className='relative'>
                 <div className='absolute -top-6 left-1/2 -translate-x-1/2 text-zinc-200 dark:text-zinc-900'>
                     <FlowerIcon className='w-12 h-12 rotate-45 opacity-60' />
                 </div>
@@ -136,7 +135,7 @@ const Index = () => {
                     <FlowerIcon className='w-4 h-4' />
                     <div className='h-px w-16 bg-current'></div>
                 </div>
-            </Section>
+            </div>
 
             {/* Point de Rendez-vous - Updated Layout */}
             <div className='my-10 p-6 text-center bg-gray-100 dark:bg-zinc-800/50 rounded-3xl border border-gray-200 dark:border-zinc-700 shadow-inner'>
@@ -162,7 +161,7 @@ const Index = () => {
             </div>
 
             {/* Parking */}
-            <Section>
+            <div>
                 <div className='flex items-center gap-3 mb-4'>
                     <FlowerIcon className='w-6 h-6 text-zinc-300 dark:text-zinc-700' />
                     <h3 className='text-lg font-semibold font-serif text-zinc-800 dark:text-zinc-200'>
@@ -197,10 +196,10 @@ const Index = () => {
                         <span className='ml-4 text-xs text-zinc-500 italic'>(10 min de marche)</span>
                     </li>
                 </ul>
-            </Section>
+            </div>
 
             {/* Timeline */}
-            <Section>
+            <div>
                 <div className='mt-4 space-y-6'>
                     {/* Matinée - Cérémonie & Accueil 💍 */}
                     <div className='bg-zinc-100 dark:bg-zinc-900/50 p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm'>
@@ -286,16 +285,16 @@ const Index = () => {
                         </ul>
                     </div>
                 </div>
-            </Section>
+            </div>
 
             {/* Notes finales */}
-            <Section className='w-full flex items-center justify-center'>
+            <div className='w-full flex items-center justify-center'>
                 <p className='text-center text-1xl md:text-2xl text-zinc-600 dark:text-zinc-400 italic font-medium leading-relaxed whitespace-nowrap'>
                     Au plaisir de vous voir, bisous bisous 🫶
                 </p>
-            </Section>
+            </div>
 
-            <Section className='mt-24 mb-60 w-full text-center'></Section>
+            <div className='mt-24 mb-60 w-full text-center'></div>
 
             {/* --- Modal Pop-up (RSVP) --- */}
             {isModalOpen && (

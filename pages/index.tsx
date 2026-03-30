@@ -48,6 +48,7 @@ const Index = () => {
                 body: JSON.stringify({
                     first_name: formData.firstName,
                     last_name: formData.lastName,
+                    transport: formData.transport,
                 }),
             })
             if (response.ok) {

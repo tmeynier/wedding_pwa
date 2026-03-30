@@ -85,6 +85,8 @@ const Index = () => {
             </div>
             </div>
 
+            <div style={{ height: '30px' }}></div>
+
             {/* --- Notre Histoire --- */}
             <div>
                 <div className='flex items-center gap-3 mb-4'>
@@ -120,6 +122,8 @@ const Index = () => {
                     </button>
                 </div>
             </div>
+
+            <div style={{ height: '30px' }}></div>
 
             {/* --- Infos Pratiques & Programme --- */}
             <div className='relative'>
@@ -287,6 +291,8 @@ const Index = () => {
                 </div>
             </div>
 
+            <div style={{ height: '30px' }}></div>
+
             {/* Notes finales */}
             <div className='w-full flex items-center justify-center'>
                 <p className='text-center text-1xl md:text-2xl text-zinc-600 dark:text-zinc-400 italic font-medium leading-relaxed whitespace-nowrap'>
@@ -294,7 +300,7 @@ const Index = () => {
                 </p>
             </div>
 
-            <div className='mt-24 mb-60 w-full text-center'></div>
+            <div style={{ height: '30px' }}></div>
 
             {/* --- Modal Pop-up (RSVP) --- */}
             {isModalOpen && (

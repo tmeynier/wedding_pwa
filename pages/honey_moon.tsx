@@ -79,8 +79,6 @@ const HoneyMoon = () => (
                 </p>
             </div>
         </Section>
-
-        <Section className='mt-24 mb-60 w-full text-center'></Section>
         
     </Page>
 )

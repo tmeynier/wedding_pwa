@@ -30,7 +30,11 @@ const MapLink = ({ href, children }: { href: string; children?: React.ReactNode 
 
 const Index = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)
-    const [formData, setFormData] = useState({ firstName: '', lastName: '' })
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        transport: ''
+    });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
     const apiUrl = process.env.NEXT_PUBLIC_DOMAIN
@@ -184,6 +188,14 @@ const Index = () => {
                         </div>
                         <span className='ml-4 text-xs text-zinc-500 italic'>(10 min de marche)</span>
                     </li>
+
+                    <li className='text-sm text-zinc-700 dark:text-zinc-300'>
+                        <div className='flex items-center gap-2'>
+                            <span className='w-1.5 h-1.5 rounded-full bg-zinc-300'></span>
+                            Chez les Meynier <MapLink href="https://maps.app.goo.gl/ZDWyEwb2ByArM3D36" />
+                        </div>
+                        <span className='ml-4 text-xs text-zinc-500 italic'>(10 min de marche)</span>
+                    </li>
                 </ul>
             </Section>
 
@@ -196,13 +208,10 @@ const Index = () => {
                             <span className='text-xl'>💍</span>
                             <h4 className='text-sm font-bold uppercase tracking-widest text-zinc-900 dark:text-zinc-200'>Cérémonie & Accueil</h4>
                         </div>
-                        <ul className='mt-3 space-y-3'>
-                            <li className='text-sm flex flex-col gap-1'>
-                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>10h45 : Arrivée des invités</span>
-                                <span className='text-xs text-zinc-500 italic'>Parkings : rue de la Mairie, cour de Grand-Mère, ou près du terrain de foot.</span>
-                            </li>
+                        <ul className='mt-3 space-y-3'>                            
+                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>10h45 :</span> Arrivée des invités sur la place de la Mairie</li>
                             <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>11h00 :</span> Début de la cérémonie</li>
-                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>11h30 :</span> Lancé de pétales, champagne & photos (église et jardin)</li>
+                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>11h30 :</span> Fin de la cérémonie, lancé de pétales, champagne & photos dans le jardin de l'église</li>
                         </ul>
                     </div>
 
@@ -213,13 +222,18 @@ const Index = () => {
                             <h4 className='text-sm font-bold uppercase tracking-widest text-zinc-900 dark:text-zinc-200'>Réception</h4>
                         </div>
                         <ul className='mt-3 space-y-3 text-sm'>
-                            <li className='flex flex-col gap-1'>
-                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h00 : Discours & Chocolats</span>
-                                <span className='text-xs text-zinc-500 italic'>Ouverture des jeux et dégustation de chocolats suisses personnalisés.</span>
-                            </li>
-                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h30 :</span> Apéritif servi en salle basse (RDC)</li>
-                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>13h20 :</span> Diaporama & début du déjeuner à l'étage</li>
-                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>15h30 :</span> Fromages & fin de service</li>
+                        <li className='flex gap-3'>
+                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h00 :</span> 
+                            Discours et jeux de bienvenu
+                        </li>
+                        <li className='flex gap-3'>
+                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h30 :</span> 
+                            Apéritif
+                        </li>
+                        <li className='flex gap-3'>
+                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h30 :</span> 
+                            Discours & début du déjeuner dans la salle des fêtes du village à côté de la mairie
+                        </li>
                         </ul>
                     </div>
 
@@ -230,14 +244,16 @@ const Index = () => {
                             <h4 className='text-sm font-bold uppercase tracking-widest text-zinc-900 dark:text-zinc-200'>L'Après-midi</h4>
                         </div>
                         <ul className='mt-3 space-y-3 text-sm'>
-                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>16h00 :</span> Petite randonnée digestive vers la maison</li>
                             <li className='flex flex-col gap-1'>
-                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>16h30 : Café, Dessert & Jeux</span>
-                                <span className='text-xs text-zinc-500 italic'>Défis culturels France-Russie, Instant Shoot & Carnet de vœux.</span>
+                                <div className='flex gap-3'>
+                                    <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>16h00 :</span> 
+                                        Petite randonnée digestive vers la maison
+                                </div>
+                                <p className='ml-16 text-xs italic text-zinc-500'>
+                                    Une petite pièce sera mise à disposition dans la salle des fêtes pour les vestes, les chaussures de rechange (pour les dames) ou d'autres affaires.
+                                </p>
                             </li>
-                            <li className='italic text-zinc-500 dark:text-zinc-400 opacity-80 pt-1'>
-                                Échecs, Kapla, Smile Life, Exploding Kittens... 🧩
-                            </li>
+                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>16h30 :</span> Café, dessert & jeux culturels France - Russie</li>
                         </ul>
                     </div>
 
@@ -248,11 +264,24 @@ const Index = () => {
                             <h4 className='text-sm font-bold uppercase tracking-widest text-zinc-900 dark:text-zinc-200'>Soirée</h4>
                         </div>
                         <ul className='mt-3 space-y-3 text-sm'>
-                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>18h30 :</span> Ouverture du bal & Danse des mariés</li>
-                            <li className='flex flex-col gap-1'>
-                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>20h00 : Cierges magiques & Foodtruck</span>
-                                <span className='text-xs text-zinc-500 italic'>Burgers végétariens pour reprendre des forces !</span>
+                            <li className='flex gap-3'>
+                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>18h30 :</span> 
+                                Ouverture du bal & danse des mariés
                             </li>
+                            <li className='flex gap-3'>
+                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>20h00 :</span> 
+                                Foodtruck burgers végétariens & crêpes party
+                            </li>
+                            <li className='flex flex-col gap-1'>
+                                <div className='flex gap-3'>
+                                    <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>20h30 :</span> 
+                                        Disco ball & jeux de société
+                                </div>
+                                <p className='ml-16 text-xs italic text-zinc-500'>
+                                    Nous vous invitons à apporter vos jeux de société préférés
+                                </p>
+                            </li>
+
                             <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>00h00 :</span> Fin des festivités</li>
                         </ul>
                     </div>
@@ -260,11 +289,13 @@ const Index = () => {
             </Section>
 
             {/* Notes finales */}
-            <Section className='mt-12 max-w-md mx-auto text-center'>
-                <p className='text-sm text-zinc-500 italic'>
-                    N'oubliez pas d'apporter vos jeux de société préférés et de laisser un mot dans le carnet de vœux ! ✨
+            <Section className='w-full flex items-center justify-center'>
+                <p className='text-center text-1xl md:text-2xl text-zinc-600 dark:text-zinc-400 italic font-medium leading-relaxed whitespace-nowrap'>
+                    Au plaisir de vous voir, bisous bisous 🫶
                 </p>
             </Section>
+
+            <Section className='mt-24 mb-60 w-full text-center'></Section>
 
             {/* --- Modal Pop-up (RSVP) --- */}
             {isModalOpen && (
@@ -273,11 +304,19 @@ const Index = () => {
                         <h3 className='text-2xl font-serif mb-6 text-zinc-900 dark:text-zinc-50'>Rejoindre la liste</h3>
                         
                         {status === 'success' ? (
-                            <div className='text-center py-4 text-green-600 font-medium'>
-                                ✨ C'est noté ! On a hâte de vous voir.
+                            <div className='text-center py-8'>
+                                <p className='text-green-600 font-medium text-lg'>✨ C'est noté !</p>
+                                <p className='text-zinc-500 text-sm mt-2'>On a hâte de vous voir.</p>
+                                <button 
+                                    onClick={() => setIsModalOpen(false)}
+                                    className='mt-6 px-6 py-2 bg-zinc-100 dark:bg-zinc-800 rounded-xl text-sm font-medium transition-colors'
+                                >
+                                    Fermer
+                                </button>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className='space-y-4'>
+                            <form onSubmit={handleSubmit} className='space-y-5'>
+                                {/* Prénom */}
                                 <div>
                                     <label className='block text-xs font-bold uppercase tracking-widest mb-1 opacity-60'>Prénom</label>
                                     <input
@@ -285,9 +324,11 @@ const Index = () => {
                                         type='text'
                                         value={formData.firstName}
                                         onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                                        className='w-full rounded-xl border border-zinc-200 p-3 outline-none focus:ring-2 focus:ring-zinc-200 dark:bg-zinc-800'
+                                        className='w-full rounded-xl border border-zinc-200 p-3 outline-none focus:ring-2 focus:ring-zinc-200 dark:bg-zinc-800 dark:border-zinc-700'
                                     />
                                 </div>
+
+                                {/* Nom */}
                                 <div>
                                     <label className='block text-xs font-bold uppercase tracking-widest mb-1 opacity-60'>Nom</label>
                                     <input
@@ -295,22 +336,55 @@ const Index = () => {
                                         type='text'
                                         value={formData.lastName}
                                         onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                                        className='w-full rounded-xl border border-zinc-200 p-3 outline-none focus:ring-2 focus:ring-zinc-200 dark:bg-zinc-800'
+                                        className='w-full rounded-xl border border-zinc-200 p-3 outline-none focus:ring-2 focus:ring-zinc-200 dark:bg-zinc-800 dark:border-zinc-700'
                                     />
                                 </div>
+
+                                {/* Section Covoiturage */}
+                                <div className='pt-2'>
+                                    <label className='block text-xs font-bold uppercase tracking-widest mb-3 opacity-60'>
+                                        Covoiturage
+                                    </label>
+                                    <div className='space-y-3'>
+                                        {[
+                                            { id: 'driver', label: "Je viens en voiture et peux covoiturer" },
+                                            { id: 'passenger', label: "Je cherche une place en covoiturage" },
+                                            { id: 'none', label: "Autre / Autonome" }
+                                        ].map((option) => (
+                                            <label key={option.id} className='flex items-center space-x-3 cursor-pointer group'>
+                                                <div className='relative flex items-center justify-center'>
+                                                    <input
+                                                        type='radio'
+                                                        name='transport'
+                                                        value={option.id}
+                                                        required
+                                                        checked={formData.transport === option.id}
+                                                        onChange={(e) => setFormData({...formData, transport: e.target.value})}
+                                                        className='peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-zinc-300 checked:border-zinc-600 dark:border-zinc-700 dark:checked:border-zinc-400 transition-all'
+                                                    />
+                                                    <div className='absolute h-2.5 w-2.5 rounded-full bg-zinc-600 dark:bg-zinc-400 opacity-0 peer-checked:opacity-100 transition-opacity' />
+                                                </div>
+                                                <span className='text-sm text-zinc-700 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors'>
+                                                    {option.label}
+                                                </span>
+                                            </label>
+                                        ))}
+                                    </div>
+                                </div>
                                 
+                                {/* Boutons d'action */}
                                 <div className='flex space-x-3 pt-4'>
                                     <button 
                                         type='button'
                                         onClick={() => setIsModalOpen(false)}
-                                        className='flex-1 py-3 text-sm font-medium hover:bg-zinc-50 rounded-xl transition-colors'
+                                        className='flex-1 py-3 text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-xl transition-colors'
                                     >
                                         Fermer
                                     </button>
                                     <button 
                                         type='submit'
                                         disabled={status === 'loading'}
-                                        className='flex-1 rounded-xl bg-zinc-600 py-3 text-white font-bold shadow-md hover:bg-zinc-700 disabled:opacity-50 transition-all'
+                                        className='flex-1 rounded-xl bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 py-3 text-white font-bold shadow-md hover:bg-zinc-700 dark:hover:bg-zinc-200 disabled:opacity-50 transition-all'
                                     >
                                         {status === 'loading' ? 'Envoi...' : 'Confirmer'}
                                     </button>

@@ -51,9 +51,9 @@ const HoneyMoon = () => (
                     Notre Lune de Miel 🇳🇴
                     <br /><br />
                     Pour nous, la Norvège avec ses fjords immenses et sa nature préservée est le pays idéal pour célébrer notre amour. 
-                    Au programme : exploration des villages côtiers colorés, navigation en kayak sur des eaux cristallines, randonnées au sommet de falaises à couper le souffle, et parapente au-dessus des plus beaux panoramas d’Europe.
+                    Au programme : exploration des villages côtiers colorés, navigation en kayak sur des eaux cristallines, randonnées au sommet de falaises, et parapente au-dessus des plus beaux panoramas d’Europe.
                     <br /><br />
-                    Si vous souhaitez nous offrir un petit bout de cette aventure, nous mettons à votre disposition une cagnotte 100 % sécurisée (dixit Tristan 😄). Nous serons infiniment touchés si vous y laissez un petit message avec votre cadeau 💝
+                    Si vous souhaitez nous offrir un petit bout de cette aventure, nous mettons à votre disposition une cagnotte 100 % sécurisée. Nous serons infiniment touchés si vous y laissez un petit message avec votre cadeau 💝
                 </p>
 
                 {/* --- Section Cagnotte --- */}
@@ -79,6 +79,9 @@ const HoneyMoon = () => (
                 </p>
             </div>
         </Section>
+
+        <Section className='mt-24 mb-60 w-full text-center'></Section>
+        
     </Page>
 )
 

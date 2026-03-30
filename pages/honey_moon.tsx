@@ -22,16 +22,16 @@ const HoneyMoon = () => (
     <Page>
         <Section>
             {/* --- 2. Update Layout: Title, Icon, spacing --- */}
-            <Section className="text-center">
-            <h1 className='text-3xl md:text-4xl font-serif text-zinc-900 dark:text-zinc-50 text-center'>
-                Lune de Miel en Norvège
-            </h1>
-                <div className='mt-2 flex items-center justify-center gap-2 text-zinc-300 dark:text-zinc-800'>
-                    <div className='h-px w-12 bg-current'></div>
-                    <FlowerIcon className='w-4 h-4' />
+            <div className="text-center">
+                <h1 className='text-3xl md:text-4xl font-serif text-zinc-900 dark:text-zinc-50 text-center'>
+                    Lune de Miel en Norvège
+                </h1>
+                    <div className='mt-2 flex items-center justify-center gap-2 text-zinc-300 dark:text-zinc-800'>
+                        <div className='h-px w-12 bg-current'></div>
+                        <FlowerIcon className='w-4 h-4' />
                     <div className='h-px w-12 bg-current'></div>
                 </div>
-            </Section>
+            </div>
 
             {/* --------------------------------------------- */}
 

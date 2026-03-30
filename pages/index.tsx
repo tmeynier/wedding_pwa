@@ -97,16 +97,14 @@ const Index = () => {
                 </div>
                 <div className='mt-4 space-y-4 text-zinc-600 dark:text-zinc-400 max-w-2xl'>
                     <p>
-                        À l’ère du numérique, c’est sur les réseaux sociaux que nos chemins se sont croisés. 
-                        Ce qui a commencé par un simple message s’est transformé en une magnifique aventure moderne.
+                        À l’ère du numérique, c’est sur les réseaux sociaux que nos chemins se sont croisés. Ce qui a commencé par un simple message est devenu bien plus qu’une conversation — c’est toute une vie qui s’est mise à écrire, mot après mot 😇
                     </p>
                     <p>
-                        Aujourd’hui, nous savourons chaque instant de notre vie de couple. Que ce soit lors de nos 
-                        week-ends à Strasbourg, nos escapades en Suisse ou nos explorations des paysages 
-                        environnants, chaque moment est une nouvelle page de notre récit.
+                        Aujourd’hui, nous savourons chaque instant de notre vie à deux. Que ce soit lors de nos week-ends enchanteurs à Strasbourg, nos escapades en Suisse et ailleurs. Chaque moment partagé est une nouvelle page de notre belle histoire que nous écrivons ensemble, jour après jour.
                     </p>
                     <p className='font-serif italic text-lg text-zinc-900 dark:text-zinc-200'>
-                        Nous avons hâte de célébrer notre union entourés des personnes qui nous sont chères. 
+                        Nous avons hâte de célébrer notre union entourés des personnes qui nous sont les plus chères. Votre présence à nos côtés pour ce chapitre si précieux est un cadeau en lui-même.
+                        Merci d’être là. ✨
                     </p>
                 </div>
             </div>
@@ -212,9 +210,9 @@ const Index = () => {
                             <h4 className='text-sm font-bold uppercase tracking-widest text-zinc-900 dark:text-zinc-200'>Cérémonie & Accueil</h4>
                         </div>
                         <ul className='mt-3 space-y-3'>                            
-                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>10h45 :</span> Arrivée des invités sur la place de la Mairie</li>
-                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>11h00 :</span> Début de la cérémonie</li>
-                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>11h30 :</span> Fin de la cérémonie, lancé de pétales, champagne & photos dans le jardin de l'église</li>
+                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>10h45</span> Arrivée des invités sur la place de la Mairie</li>
+                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>11h00</span> Début de la cérémonie</li>
+                            <li className='text-sm flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>11h30</span> Fin de la cérémonie, lancé de pétales, champagne & photos dans le jardin de l'église</li>
                         </ul>
                     </div>
 
@@ -226,16 +224,16 @@ const Index = () => {
                         </div>
                         <ul className='mt-3 space-y-3 text-sm'>
                         <li className='flex gap-3'>
-                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h00 :</span> 
+                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h00</span> 
                             Discours et jeux de bienvenu
                         </li>
                         <li className='flex gap-3'>
-                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h30 :</span> 
+                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h30</span> 
                             Apéritif
                         </li>
                         <li className='flex gap-3'>
-                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h30 :</span> 
-                            Discours & début du déjeuner dans la salle des fêtes du village à côté de la mairie
+                            <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>12h30</span> 
+                            Discours & début du déjeuner dans la salle des fêtes à côté de la mairie
                         </li>
                         </ul>
                     </div>
@@ -249,14 +247,14 @@ const Index = () => {
                         <ul className='mt-3 space-y-3 text-sm'>
                             <li className='flex flex-col gap-1'>
                                 <div className='flex gap-3'>
-                                    <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>16h00 :</span> 
-                                        Petite randonnée digestive vers la maison
+                                    <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>16h00</span> 
+                                        Petite balade digestive vers la maison
                                 </div>
                                 <p className='ml-16 text-xs italic text-zinc-500'>
-                                    Une petite pièce sera mise à disposition dans la salle des fêtes pour les vestes, les chaussures de rechange (pour les dames) ou d'autres affaires.
+                                    Une petite pièce sera mise à disposition dans la salle des fêtes (pour les vestes, chaussures de rechange, etc.)
                                 </p>
                             </li>
-                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>16h30 :</span> Café, dessert & jeux culturels France - Russie</li>
+                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>16h30</span> Café, dessert & jeux culturels France - Russie</li>
                         </ul>
                     </div>
 
@@ -268,16 +266,16 @@ const Index = () => {
                         </div>
                         <ul className='mt-3 space-y-3 text-sm'>
                             <li className='flex gap-3'>
-                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>18h30 :</span> 
+                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>18h30</span> 
                                 Ouverture du bal & danse des mariés
                             </li>
                             <li className='flex gap-3'>
-                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>20h00 :</span> 
-                                Foodtruck burgers végétariens & crêpes party
+                                <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>20h00</span> 
+                                Dîner
                             </li>
                             <li className='flex flex-col gap-1'>
                                 <div className='flex gap-3'>
-                                    <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>20h30 :</span> 
+                                    <span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>20h30</span> 
                                         Disco ball & jeux de société
                                 </div>
                                 <p className='ml-16 text-xs italic text-zinc-500'>
@@ -285,7 +283,7 @@ const Index = () => {
                                 </p>
                             </li>
 
-                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>00h00 :</span> Fin des festivités</li>
+                            <li className='flex gap-3'><span className='font-mono font-semibold text-zinc-800 dark:text-zinc-400'>00h00</span> Fin des festivités</li>
                         </ul>
                     </div>
                 </div>
